@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<environments default="xxj">
+		<environment id="xxj">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/firstdb1"/>
+				<property name="username" value="root"/>
+				<property name="password" value="123456"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+        <!-- 注册usermapper.xml文件， 
+        usermapper.xml位于com.ywxx.mapping这个包下，所以resource写成com/ywxx/mapping/usermapper.xml-->
+        <mapper resource="com/ywxx/mapping/usermapper.xml"/>
+    </mappers>
+</configuration>
